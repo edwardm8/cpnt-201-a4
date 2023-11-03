@@ -2,5 +2,9 @@
 
 ## Edward Mah
 
+## Page
+
+## Repo
+
 ## npm choice
 [chartjs](https://www.chartjs.org/docs/latest/)
