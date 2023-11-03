@@ -2,6 +2,12 @@ import '../css/style.css'
 import javascriptLogo from '../images/javascript.svg'
 import viteLogo from '../images/vite.svg'
 import { setupCounter } from './counter.js'
+import dayjs from 'dayjs'
+
+let now = dayjs().format('MMM D, YYYY')
+const oldDate = dayjs('2023-09-05')
+
+const diffDate = dayjs().diff(oldDate, 'day')
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -12,6 +18,11 @@ document.querySelector('#app').innerHTML = `
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
     <h1>Hello Vite!</h1>
+    <h2>Today's Date: ${now}</h2>
+    <h2>Number of days since start: ${diffDate}</h2>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
